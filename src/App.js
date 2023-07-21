@@ -12,9 +12,9 @@ const App = () => {
 }
 if(tours.length === 0){
   return (
-    <div> 
+    <div className='empty-tour-div'> 
       <h2> No Tours Left</h2>
-      <button onClick={()=>setTours(data)}> Refresh</button>
+      <button onClick={()=>setTours(data)} className='refersh-btn'> Refresh</button>
     </div>
   );
 }

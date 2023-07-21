@@ -9,7 +9,7 @@ function Card( {id,name,image,info,price,removeTour}){
     }
     return (
         <div className="card">
-            <img className="tour-img"></img>
+            <img className="tour-img" src={image}></img>
             <div className="tour-info">
                 <div className="tours-detail">
                     <h4 className="tour-price">{price}</h4>
@@ -18,13 +18,13 @@ function Card( {id,name,image,info,price,removeTour}){
                 <div className="tour-description">
                     {description}
                     <span className="read-more" onClick={readmoreHandler}>
-                        {readmore ? `show less` : `read more`}
+                        {readmore ? `Show Less` : `Read More`}
                     </span>     
                 </div>
             </div>
-            <div>
-                <button className="ins">Intrested</button>
-                <button className="not-ins" onClick={ () => removeTour(id)}>Not Intrested</button>
+            <div className="card-btn">
+                <button className="btn">Intrested</button>
+                <button className="btn" onClick={ () => removeTour(id)}>Not Intrested</button>
             </div>
         </div>
     );

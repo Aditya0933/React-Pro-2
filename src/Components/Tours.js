@@ -1,18 +1,18 @@
-import cards from "./Cards"
-function Tours({tours,removeTourHandler}){
+import Card from "./Cards"
+function Tours({tours,removeTour}){
     return(
         <div>
             <div>                
-                <h1> Plan With Love & hearts</h1>
+                <h1 className='text-{3rem}'> Plan With Love & hearts</h1>
             </div>
             <div>
                 {
                     tours.map((tour)=>{
-                        return <cards {...tour} removeTour = {removeTourHandler}></cards>
+                        return <Card {...tour} removeTour={removeTour}></Card>
                     })
                 }
             </div>
         </div>
-    )
-}
+    );
+} 
 export default Tours; 
